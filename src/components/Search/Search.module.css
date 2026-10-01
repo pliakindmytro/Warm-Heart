@@ -1,0 +1,29 @@
+.search {
+  width: fit-content;
+  height: 28px;
+  display: none;
+
+  p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 130%;
+    color: var(--black);
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .search {
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  .search p {
+    display: block;
+  }
+
+  .search svg {
+    display: none;
+  }
+}

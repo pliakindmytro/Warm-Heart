@@ -1,0 +1,60 @@
+:root {
+  --black: #2c2c2c;
+  --beige: #f7ede4;
+  --white: #fdfbf9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+.navigation {
+  display: none;
+  gap: 50px;
+
+  a {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 130%;
+    color: var(--black);
+  }
+}
+
+.mobile {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  a {
+    font-size: 20px;
+    color: var(--black);
+  }
+}
+
+.cart {
+  display: none;
+}
+
+.mobileCart {
+  display: block;
+}
+
+@media (min-width: 1920px) {
+  .navigation {
+    display: flex;
+  }
+}

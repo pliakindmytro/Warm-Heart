@@ -1,0 +1,11 @@
+.purchases {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+@media (min-width: 1000px) {
+  .purchases {
+    gap: 50px;
+  }
+}

@@ -1,0 +1,33 @@
+.wrapper {
+  position: relative;
+
+  input {
+    width: 100%;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: var(--black);
+    padding-bottom: 15px;
+    border: none;
+    background-color: inherit;
+  }
+
+  input::placeholder {
+    opacity: 0.5;
+  }
+}
+
+.wrapper::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--black);
+  border-radius: 10px;
+}
+
+.wrapper.less::after {
+  height: 2px;
+}

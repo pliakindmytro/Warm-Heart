@@ -1,0 +1,38 @@
+.wrapper {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+
+  a {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    color: var(--white);
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 480px) {
+  .wrapper {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    gap: 50px;
+
+    a {
+      font-size: 17px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 25px;
+    grid-column: 1/2;
+  }
+}

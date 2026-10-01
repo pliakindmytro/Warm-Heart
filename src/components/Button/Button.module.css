@@ -1,0 +1,19 @@
+.button {
+  padding: 13px 80px 18px;
+  border-radius: 100px;
+  border: none;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 140%;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 21px;
+  }
+}

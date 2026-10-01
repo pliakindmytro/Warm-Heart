@@ -1,0 +1,29 @@
+.bag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  span {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 130%;
+    color: var(--black);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 130%;
+    color: var(--black);
+  }
+}
+
+@media (min-width: 1000px) {
+  .bag p {
+    display: block;
+  }
+
+  .bag svg {
+    display: none;
+  }
+}

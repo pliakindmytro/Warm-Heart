@@ -1,0 +1,35 @@
+.section {
+  padding: 70px 20px 90px 20px;
+  display: flex;
+}
+
+.column,
+.row {
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 90px 20px 110px 20px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1920px) {
+  .section {
+    padding: 135px;
+    gap: 61px;
+  }
+}
