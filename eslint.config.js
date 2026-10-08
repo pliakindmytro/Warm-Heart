@@ -22,5 +22,19 @@ export default defineConfig([
       "no-unused-vars": "warn",
     },
   },
+  {
+    files: ["cypress/**/*.{js,jsx}"],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        cy: "readonly",
+        Cypress: "readonly",
+        describe: "readonly",
+        it: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+      },
+    },
+  },
   eslintConfigPrettier,
 ]);
