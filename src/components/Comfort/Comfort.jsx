@@ -23,14 +23,19 @@ export default function Comfort() {
         <div className={styles.description}>
           <h3 className={styles.subtitle}>Sideneert</h3>
           <div className={styles.made}>
-            <span>It is made from soft New Zealand wool,</span> <span>which is naturally stain-repellent.</span>
+            <span>It is made from soft New Zealand wool,</span>{" "}
+            <span>which is naturally stain-repellent.</span>
           </div>
           <div className={styles.bedspread}>
-            <span>This bedspread is an easy way to freshen up your bedroom decor. Plus, it can be</span>{" "}
+            <span>
+              This bedspread is an easy way to freshen up your bedroom decor. Plus, it can be
+            </span>{" "}
             <span>used as an extra blanket if you get cold.</span>
           </div>
           <div className={styles.button}>
-            <Button style={{ backgroundColor: "var(--white)", color: "var(--black)" }}>Go to shop</Button>
+            <Button style={{ backgroundColor: "var(--white)", color: "var(--black)" }}>
+              Go to shop
+            </Button>
           </div>
         </div>
       </div>

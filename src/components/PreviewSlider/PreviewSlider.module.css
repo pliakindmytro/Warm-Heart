@@ -1,0 +1,134 @@
+.preview {
+  width: 100%;
+  --swiper-pagination-bullet-horizontal-gap: 15px;
+  transform: translateY(-50px);
+  height: 100%;
+}
+
+.slide img {
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 180px;
+  height: 174px;
+  object-fit: cover;
+  transform: rotateZ(10deg);
+}
+
+.preview :global(.swiper-pagination) {
+  position: static;
+  margin-top: 48px;
+}
+
+.preview :global(.swiper-pagination-bullet) {
+  width: 16px;
+  height: 16px;
+  background-color: var(--white);
+  opacity: 0.3;
+}
+
+.preview :global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+}
+
+.arrowTop,
+.arrowBottom {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .preview {
+    transform: translateY(-100px);
+  }
+
+  .slide img {
+    transform: translateX(125px) rotateZ(10deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .preview :global(.swiper-pagination) {
+    margin-top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    right: 30px;
+    height: fit-content;
+    width: fit-content;
+    transform: translateY(-25px) !important;
+  }
+
+  .preview {
+    width: 100%;
+    height: 920px;
+  }
+
+  .preview :global(.swiper-pagination-bullet) {
+    margin: 0 !important;
+  }
+
+  .slide img {
+    width: 251px;
+    height: 241px;
+    transform: translate(-30px, 640px) rotateZ(10deg);
+  }
+}
+
+@media (min-width: 1000px) {
+  .slide img {
+    width: 312px;
+    height: 300px;
+    transform: translate(-40px, 400px) rotateZ(10deg);
+  }
+
+  .preview :global(.swiper-pagination) {
+    transform: translate(0, -25px) !important;
+  }
+
+  .slide {
+    position: relative;
+  }
+
+  .arrowTop,
+  .arrowBottom {
+    display: block;
+    position: absolute;
+    width: 111px;
+    height: 111px;
+    pointer-events: none;
+  }
+
+  .arrowTop {
+    transform: translate(30px, 20px);
+  }
+
+  .arrowBottom {
+    transform: translate(280px, 365px) rotate(180deg);
+  }
+
+  .arrowTop:hover,
+  .arrowBottom:hover {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1920px) {
+  .slide img {
+    width: 405px;
+    height: 390px;
+    transform: translate(-100px, 360px) rotateZ(10deg);
+  }
+
+  .preview :global(.swiper-pagination) {
+    transform: translate(-30px, -25px) !important;
+  }
+
+  .arrowTop {
+    transform: translate(50px, -120px);
+  }
+
+  .arrowBottom {
+    transform: translate(365px, 350px) rotate(180deg);
+  }
+}
