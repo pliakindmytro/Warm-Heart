@@ -1,6 +1,7 @@
 import styles from "./App.module.css";
 
 import Header from "../Header/Header";
+import Preview from "../Preview/Preview";
 import PopularProducts from "../PopularProducts/PopularProducts";
 import Comfort from "../Comfort/Comfort";
 import EcoMaterials from "../EcoMaterials/EcoMaterials";
@@ -17,6 +18,7 @@ function App() {
     <div className={styles.app}>
       <Header />
 
+      <Preview />
       <PopularProducts />
       <Comfort />
       <EcoMaterials />
