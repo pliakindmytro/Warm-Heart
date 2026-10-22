@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import Filters from "../Filters/Filters";
 import ShopCard from "../ShopCard/ShopCard";
 import Pagination from "../Pagination/Pagination";
 import Loader from "../Loader/Loader";
@@ -37,7 +38,7 @@ export default function ShopProducts() {
 
   return (
     <div className={styles.shop}>
-      <div>filters</div>
+      <Filters />
 
       {loading && <Loader />}
 
