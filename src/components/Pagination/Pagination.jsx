@@ -1,3 +1,5 @@
+import NumButton from "../NumButton/NumButton";
+
 import styles from "./Pagination.module.css";
 
 export default function Pagination() {
@@ -20,8 +22,8 @@ export default function Pagination() {
         />
       </svg>
 
-      <div className={`${styles.page} ${styles.active}`}>1</div>
-      <div className={styles.page}>2</div>
+      <NumButton num={1} active={true} />
+      <NumButton num={2} />
 
       <svg
         width="33"

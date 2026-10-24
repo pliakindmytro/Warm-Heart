@@ -2,6 +2,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import MainPage from "../../pages/MainPage";
 import ShopPage from "../../pages/ShopPage";
+import CardPage from "../../pages/CardPage";
 
 import styles from "./App.module.css";
 
@@ -11,7 +12,8 @@ function App() {
       <Header />
 
       {/* <MainPage /> */}
-      <ShopPage />
+      {/* <ShopPage /> */}
+      <CardPage />
 
       <Footer />
     </div>

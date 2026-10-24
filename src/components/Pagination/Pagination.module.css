@@ -17,36 +17,6 @@
   right: 0;
 }
 
-.page {
-  position: relative;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 130%;
-  color: var(--black);
-  transition: all 0.5s ease;
-}
-
-.page::after {
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, calc(-50% + 1px));
-  border-radius: 50%;
-  background-color: var(--white);
-  z-index: -1;
-}
-
-.page.active {
-  color: var(--white);
-}
-
-.page.active::after {
-  background-color: var(--black);
-}
-
 @media (min-width: 480px) {
   .wrapper {
     width: 329px;

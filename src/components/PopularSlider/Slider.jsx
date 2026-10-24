@@ -2,19 +2,17 @@ import { useRef } from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { popularProducts } from "../../data/popularProducts";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import styles from "./PopularSlider.module.css";
+import styles from "./Slider.module.css";
 
-export default function PopularSlider() {
+export default function Slider({ products, initialSlide }) {
   const swiperRef = useRef(null);
 
   return (
-    <>
+    <section className={styles.section}>
       <Swiper
         modules={[Pagination]}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -32,12 +30,12 @@ export default function PopularSlider() {
             spaceBetween: 30,
           },
         }}
-        initialSlide={4}
+        initialSlide={initialSlide}
         loop={true}
         pagination={{ clickable: true }}
         className={styles.popular}
       >
-        {popularProducts.map((product) => (
+        {products.map((product) => (
           <SwiperSlide className={styles.slide}>
             <div className={styles.wrapper}>
               <div className={styles.content}>
@@ -92,6 +90,6 @@ export default function PopularSlider() {
           </svg>
         </button>
       </div>
-    </>
+    </section>
   );
 }

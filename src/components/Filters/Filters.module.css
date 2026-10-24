@@ -23,6 +23,10 @@
   color: var(--black);
 }
 
+.select {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .text,
   .icon {
@@ -34,6 +38,7 @@
   }
 
   .select {
+    display: initial;
     font-weight: 400;
     font-size: 21px;
     line-height: 130%;
@@ -45,7 +50,22 @@
   }
 }
 
+@media (min-width: 1000px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .select {
+    cursor: pointer;
+  }
+}
+
 @media (min-width: 1920px) {
+  .wrapper {
+    width: 1218px;
+  }
+
   .choice {
     column-gap: 50px;
   }
