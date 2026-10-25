@@ -3,6 +3,7 @@ import Footer from "../Footer/Footer";
 import MainPage from "../../pages/MainPage";
 import ShopPage from "../../pages/ShopPage";
 import CardPage from "../../pages/CardPage";
+import ShoppingCartPage from "../../pages/ShoppingCartPage";
 
 import styles from "./App.module.css";
 
@@ -13,7 +14,8 @@ function App() {
 
       {/* <MainPage /> */}
       {/* <ShopPage /> */}
-      <CardPage />
+      {/* <CardPage /> */}
+      <ShoppingCartPage />
 
       <Footer />
     </div>
