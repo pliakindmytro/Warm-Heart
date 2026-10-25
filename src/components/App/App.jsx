@@ -4,6 +4,7 @@ import MainPage from "../../pages/MainPage";
 import ShopPage from "../../pages/ShopPage";
 import CardPage from "../../pages/CardPage";
 import ShoppingCartPage from "../../pages/ShoppingCartPage";
+import ContactsPage from "../../pages/ContactsPage";
 
 import styles from "./App.module.css";
 
@@ -15,7 +16,8 @@ function App() {
       {/* <MainPage /> */}
       {/* <ShopPage /> */}
       {/* <CardPage /> */}
-      <ShoppingCartPage />
+      {/* <ShoppingCartPage /> */}
+      <ContactsPage />
 
       <Footer />
     </div>
