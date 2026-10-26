@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { previewProducts } from "../../data/previewProducts";
 
 import styles from "./PreviewSlider.module.css";
+import { Link } from "react-router-dom";
 
 export default function PreviewSlider() {
   return (
@@ -22,7 +23,9 @@ export default function PreviewSlider() {
     >
       {previewProducts.map((product) => (
         <SwiperSlide className={styles.slide}>
-          <img src={product.image} alt={product.image} />
+          <Link to="/shop/1" className={styles.link}>
+            <img src={product.image} alt={product.image} />
+          </Link>
           <svg
             width="111"
             height="111"

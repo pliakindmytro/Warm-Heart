@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import styles from "./Slider.module.css";
+import { Link } from "react-router-dom";
 
 export default function Slider({ products, initialSlide }) {
   const swiperRef = useRef(null);
@@ -37,18 +38,20 @@ export default function Slider({ products, initialSlide }) {
       >
         {products.map((product) => (
           <SwiperSlide className={styles.slide}>
-            <div className={styles.wrapper}>
-              <div className={styles.content}>
-                <img src={product.image} alt={product.name} className={styles.img} />
-              </div>
-              <div className={styles.description}>
-                <p className={styles.name}>{product.name}</p>
-                <div className={styles.descriptionWrapper}>
-                  <p>{product.size}</p>
-                  <p>€{product.price}</p>
+            <Link to={`/shop/${product.id}`}>
+              <div className={styles.wrapper}>
+                <div className={styles.content}>
+                  <img src={product.image} alt={product.name} className={styles.img} />
+                </div>
+                <div className={styles.description}>
+                  <p className={styles.name}>{product.name}</p>
+                  <div className={styles.descriptionWrapper}>
+                    <p>{product.size}</p>
+                    <p>€{product.price}</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

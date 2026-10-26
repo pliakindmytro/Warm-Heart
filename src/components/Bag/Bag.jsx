@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 import styles from "./Bag.module.css";
 
 export default function Bag({ logo = true, classCart }) {
   return (
-    <div className={styles.bag}>
+    <Link to="/cart" className={styles.bag}>
       {logo && (
         <svg
           width="28"
@@ -38,6 +40,6 @@ export default function Bag({ logo = true, classCart }) {
       <p className={classCart}>Cart</p>
 
       <span>(4)</span>
-    </div>
+    </Link>
   );
 }

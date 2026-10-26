@@ -1,26 +1,29 @@
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import MainLayout from "../MainLayout/MainLayout";
 import MainPage from "../../pages/MainPage";
 import ShopPage from "../../pages/ShopPage";
 import CardPage from "../../pages/CardPage";
 import ShoppingCartPage from "../../pages/ShoppingCartPage";
 import ContactsPage from "../../pages/ContactsPage";
 
-import styles from "./App.module.css";
-
 function App() {
   return (
-    <div className={styles.app}>
-      <Header />
+    <BrowserRouter>
+      <Routes>
+        <Route element={<MainLayout />}>
+          <Route index element={<MainPage />} />
+          <Route path="shop" element={<ShopPage />} />
+          <Route path="shop/:id" element={<CardPage />} />
+          <Route path="cart" element={<ShoppingCartPage />} />
+          <Route path="contacts" element={<ContactsPage />} />
+        </Route>
 
-      {/* <MainPage /> */}
-      {/* <ShopPage /> */}
-      {/* <CardPage /> */}
-      {/* <ShoppingCartPage /> */}
-      <ContactsPage />
-
-      <Footer />
-    </div>
+        {/* <Route element={<AuthLayout />}>
+            <Route path="login" element={<LoginPage />} />
+          </Route> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
 
