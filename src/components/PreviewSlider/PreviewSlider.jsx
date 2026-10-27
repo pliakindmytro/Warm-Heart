@@ -1,10 +1,10 @@
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 
 import { previewProducts } from "../../data/previewProducts";
 
 import styles from "./PreviewSlider.module.css";
-import { Link } from "react-router-dom";
 
 export default function PreviewSlider() {
   return (
@@ -23,7 +23,7 @@ export default function PreviewSlider() {
     >
       {previewProducts.map((product) => (
         <SwiperSlide className={styles.slide}>
-          <Link to="/shop/1" className={styles.link}>
+          <Link to="/shop/7" className={styles.link}>
             <img src={product.image} alt={product.image} />
           </Link>
           <svg

@@ -1,9 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 import Button from "../Button/Button";
 import PreviewSlider from "../PreviewSlider/PreviewSlider";
 
 import styles from "./Preview.module.css";
 
 export default function Preview() {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.preview}>
@@ -26,6 +30,7 @@ export default function Preview() {
           <Button
             style={{ backgroundColor: "var(--black)", color: "var(--white)" }}
             className={styles.previewBtn}
+            onClick={() => navigate("/shop")}
           >
             Shop now
           </Button>

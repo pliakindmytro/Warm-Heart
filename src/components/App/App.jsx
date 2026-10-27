@@ -6,6 +6,7 @@ import ShopPage from "../../pages/ShopPage";
 import CardPage from "../../pages/CardPage";
 import ShoppingCartPage from "../../pages/ShoppingCartPage";
 import ContactsPage from "../../pages/ContactsPage";
+import AuthPage from "../../pages/AuthPage";
 
 function App() {
   return (
@@ -17,11 +18,8 @@ function App() {
           <Route path="shop/:id" element={<CardPage />} />
           <Route path="cart" element={<ShoppingCartPage />} />
           <Route path="contacts" element={<ContactsPage />} />
+          <Route path="login" element={<AuthPage />} />
         </Route>
-
-        {/* <Route element={<AuthLayout />}>
-            <Route path="login" element={<LoginPage />} />
-          </Route> */}
       </Routes>
     </BrowserRouter>
   );

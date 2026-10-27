@@ -1,0 +1,26 @@
+.left,
+.right {
+  position: absolute;
+  bottom: 0;
+  display: none;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.left {
+  left: 410px;
+}
+
+.right {
+  right: 410px;
+}
+
+@media (min-width: 1920px) {
+  .left,
+  .right {
+    display: initial;
+  }
+}

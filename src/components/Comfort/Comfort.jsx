@@ -1,3 +1,5 @@
+import { Link, useNavigate } from "react-router-dom";
+
 import styles from "./Comfort.module.css";
 
 import Button from "../Button/Button";
@@ -5,6 +7,8 @@ import Button from "../Button/Button";
 import sideneert from "../../assets/images/sideneert.png";
 
 export default function Comfort() {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.comfort}>
       <div className={styles.wrapperTitle}>
@@ -18,7 +22,9 @@ export default function Comfort() {
       </div>
 
       <div className={styles.wrapper}>
-        <img src={sideneert} alt="Sideneert" className={styles.img} />
+        <Link to="/shop/2" className={styles.link}>
+          <img src={sideneert} alt="Sideneert" className={styles.img} />
+        </Link>
 
         <div className={styles.description}>
           <h3 className={styles.subtitle}>Sideneert</h3>
@@ -33,7 +39,10 @@ export default function Comfort() {
             <span>used as an extra blanket if you get cold.</span>
           </div>
           <div className={styles.button}>
-            <Button style={{ backgroundColor: "var(--white)", color: "var(--black)" }}>
+            <Button
+              style={{ backgroundColor: "var(--white)", color: "var(--black)" }}
+              onClick={() => navigate("/shop/2")}
+            >
               Go to shop
             </Button>
           </div>

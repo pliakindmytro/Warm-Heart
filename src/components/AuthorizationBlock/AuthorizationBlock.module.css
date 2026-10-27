@@ -1,0 +1,45 @@
+.block {
+  width: 1218px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--black);
+}
+
+.text {
+  margin-top: 15px;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--black);
+}
+
+.form {
+  width: 600px;
+  margin: 50px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.email,
+.password {
+  border-radius: 25px;
+  padding: 15px;
+  border: none;
+  background-color: var(--beige);
+  font-size: 17px;
+}
+
+.btn {
+  width: 300px;
+  background-color: var(--black);
+  color: var(--white);
+  margin: 0 auto;
+}

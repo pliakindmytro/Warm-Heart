@@ -1,13 +1,15 @@
 import { useRef } from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import styles from "./Slider.module.css";
-import { Link } from "react-router-dom";
+import ArrowLeft from "../ArrowsNavigate/ArrowLeft";
+import ArrowRight from "../ArrowsNavigate/ArrowRight";
 
 export default function Slider({ products, initialSlide }) {
   const swiperRef = useRef(null);
@@ -54,45 +56,9 @@ export default function Slider({ products, initialSlide }) {
             </Link>
           </SwiperSlide>
         ))}
+        <ArrowLeft onClick={() => swiperRef.current?.slidePrev()} />
+        <ArrowRight onClick={() => swiperRef.current?.slideNext()} />
       </Swiper>
-
-      <div className={styles.navigation}>
-        <button className={styles.left} onClick={() => swiperRef.current?.slidePrev()}>
-          <svg
-            width="30"
-            height="20"
-            viewBox="0 0 33 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M31.5 11.5H1.5M12.5 21.5L1.5 11.5L12.5 1.5"
-              stroke="#2C2C2C"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-
-        <button className={styles.right} onClick={() => swiperRef.current?.slideNext()}>
-          <svg
-            width="30"
-            height="20"
-            viewBox="0 0 33 23"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.5 11.5H31.5M20.5 21.5L31.5 11.5L20.5 1.5"
-              stroke="#2C2C2C"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
     </section>
   );
 }
