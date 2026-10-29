@@ -1,0 +1,47 @@
+.shop {
+  padding: 35px 20px 60px 20px;
+}
+
+.wrapper {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+
+@media (min-width: 480px) {
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    margin-top: 35px;
+    row-gap: 35px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .shop {
+    padding: 45px 20px 80px 20px;
+  }
+
+  .wrapper {
+    margin: 35px auto 0 auto;
+    width: 960px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .shop {
+    padding: 60px 20px 50px 20px;
+  }
+
+  .wrapper {
+    width: 1218px;
+    column-gap: 30px;
+  }
+}

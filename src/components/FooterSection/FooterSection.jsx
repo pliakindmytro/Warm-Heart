@@ -29,8 +29,20 @@ export default function FooterSection({ title, expanded = false, children }) {
       <div className={styles.wrapper} onClick={handleToggleIsExpanded}>
         <h4 className={styles.title}>{title}</h4>
         <span className={isExpanded ? styles.active : null}>
-          <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 4L7 10L13 4" stroke="#FDFBF9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <svg
+            width="14"
+            height="11"
+            viewBox="0 0 14 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 4L7 10L13 4"
+              stroke="#FDFBF9"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </span>
       </div>

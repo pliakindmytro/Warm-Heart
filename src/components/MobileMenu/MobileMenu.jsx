@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
+
 import styles from "./MobileMenu.module.css";
 
 import NavLinks from "../NavLinks/NavLinks";
-import Input from "../Input/Input";
 import Bag from "../Bag/Bag";
 
 export default function MobileMenu({ onToggleIsOpen }) {
@@ -14,7 +15,9 @@ export default function MobileMenu({ onToggleIsOpen }) {
         <NavLinks className="mobile" />
         <div className={styles.divider}></div>
         <div className={styles.shopping}>
-          <Input placeholder="Search" lessHeight={true} />
+          <Link to="/login" className={styles.link}>
+            Authorization
+          </Link>
           <Bag logo={false} classCart="mobileCart" />
         </div>
       </div>

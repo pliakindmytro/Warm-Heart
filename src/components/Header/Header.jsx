@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+
 import styles from "./Header.module.css";
 
 import MobileMenu from "../MobileMenu/MobileMenu";
@@ -22,8 +24,12 @@ export default function Header() {
       {isOpen && <MobileMenu onToggleIsOpen={handleToggleIsOpen} />}
 
       <h2>
-        <span className={styles.shortTitle}>WH</span>
-        <span className={styles.fullTitle}>WARM HEART</span>
+        <Link to="/" className={styles.shortTitle}>
+          WH
+        </Link>
+        <Link to="/" className={styles.fullTitle}>
+          WARM HEART
+        </Link>
       </h2>
 
       <Purchases />

@@ -1,0 +1,52 @@
+{
+  "products": [
+    { "id": 1, "name": "Ingrun", "size": "130x170", "price": 90, "image": "images/Ingrun.png" },
+    {
+      "id": 2,
+      "name": "Mialotta",
+      "size": "130x170",
+      "price": 140,
+      "image": "images/Mialotta.png"
+    },
+    {
+      "id": 3,
+      "name": "Luddmalla",
+      "size": "130x170",
+      "price": 95,
+      "image": "images/Luddmalla.png"
+    },
+    {
+      "id": 4,
+      "name": "Vivianna",
+      "size": "120x180",
+      "price": 175,
+      "image": "images/Vivianna.png"
+    },
+    { "id": 5, "name": "Evali", "size": "130x170", "price": 90, "image": "images/Evali.png" },
+    { "id": 6, "name": "Kersti", "size": "150x200", "price": 175, "image": "images/Kersti.png" },
+    { "id": 7, "name": "Helgun", "size": "150x200", "price": 135, "image": "images/Helgun.png" },
+    {
+      "id": 8,
+      "name": "Dagnhild",
+      "size": "150x200",
+      "price": 150,
+      "image": "images/Dagnhild.png"
+    },
+    { "id": 9, "name": "Varkrage", "size": "110x170", "price": 90, "image": "images/Varkrage.png" },
+    {
+      "id": 10,
+      "name": "Dablidun",
+      "size": "150x200",
+      "price": 170,
+      "image": "images/Dablidun.png"
+    },
+    {
+      "id": 11,
+      "name": "Ingabritta",
+      "size": "130x170",
+      "price": 120,
+      "image": "images/Ingabritta.png"
+    },
+    { "id": 12, "name": "Ylvali", "size": "130x170", "price": 110, "image": "images/Ylvali.png" }
+  ]
+}

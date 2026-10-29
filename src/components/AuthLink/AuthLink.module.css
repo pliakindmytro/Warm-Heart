@@ -3,13 +3,18 @@
   height: 28px;
   display: none;
 
-  p {
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 130%;
-    color: var(--black);
-    display: none;
+  svg {
+    width: 30px;
+    height: 30px;
   }
+}
+
+.auth {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 130%;
+  color: var(--black);
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -19,7 +24,7 @@
 }
 
 @media (min-width: 1000px) {
-  .search p {
+  .auth {
     display: block;
   }
 

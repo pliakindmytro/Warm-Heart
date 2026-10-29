@@ -1,0 +1,159 @@
+.popular {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  --swiper-pagination-bullet-horizontal-gap: 15px;
+}
+
+.slide {
+  margin-top: 40px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.content {
+  border-radius: 25px;
+  padding: 40px;
+  background: var(--beige);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  object-fit: contain;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--black);
+}
+
+.descriptionWrapper {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 140%;
+    color: var(--black);
+  }
+}
+
+.navigation {
+  display: none;
+}
+
+.popular :global(.swiper-pagination) {
+  position: static;
+  margin-top: 40px;
+}
+
+.popular :global(.swiper-pagination-bullet) {
+  width: 16px;
+  height: 16px;
+  background-color: var(--black);
+  opacity: 0.3;
+}
+
+.popular :global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+}
+
+@media (min-width: 480px) {
+  .content {
+    padding: 40px 25px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slide {
+    margin-top: 50px;
+  }
+
+  .content {
+    padding: 50px;
+  }
+
+  .img {
+    max-width: 254px;
+  }
+
+  .wrapper {
+    row-gap: 15px;
+  }
+
+  .name {
+    font-size: 24px;
+    margin-bottom: 3px;
+  }
+
+  .descriptionWrapper p {
+    font-size: 21px;
+  }
+
+  .popular :global(.swiper-pagination) {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .slide {
+    margin-top: 60px;
+  }
+
+  .content {
+    padding: 60px;
+  }
+
+  .img {
+    max-width: 100%;
+  }
+
+  .wrapper {
+    row-gap: 20px;
+  }
+
+  .name {
+    margin-bottom: 5px;
+  }
+
+  .section {
+    position: relative;
+  }
+
+  .navigation {
+    display: block;
+    position: absolute;
+    width: 406px;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    transform: translate(-50%, 130px);
+    bottom: 130px;
+    z-index: 100;
+
+    button {
+      border: none;
+      background-color: transparent;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+
+  .popular :global(.swiper-pagination) {
+    margin-top: 60px;
+  }
+}

@@ -1,11 +1,11 @@
-// Classes from index.css
+import { Link } from "react-router-dom";
 
 export default function NavLinks({ className }) {
   return (
     <nav className={className}>
-      <a href="#">Shop</a>
-      <a href="#">About us</a>
-      <a href="#">Contacts</a>
+      <Link to="/shop">Shop</Link>
+      <Link to="/">About us</Link>
+      <Link to="/contacts">Contacts</Link>
     </nav>
   );
 }
