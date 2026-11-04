@@ -103,6 +103,14 @@
       "price": 85,
       "image": "images/Rovaror.png",
       "color": "gray"
+    },
+    {
+      "id": 14,
+      "name": "Sideneert",
+      "size": "150x200",
+      "price": 135,
+      "image": "images/Sideneert.png",
+      "color": "gray"
     }
   ]
 }

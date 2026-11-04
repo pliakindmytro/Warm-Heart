@@ -1,13 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 
+import Button from "../Button/Button";
+import Loader from "../Loader/Loader";
+
+import useFetch from "../../hooks/useFetch";
+
 import styles from "./Comfort.module.css";
 
-import Button from "../Button/Button";
-
-import sideneert from "../../assets/images/sideneert.png";
+const COMFORT_ITEM = 14;
 
 export default function Comfort() {
   const navigate = useNavigate();
+
+  const [data, loading, error] = useFetch(`http://localhost:3001/products/${COMFORT_ITEM}`);
 
   return (
     <div className={styles.comfort}>
@@ -22,12 +27,13 @@ export default function Comfort() {
       </div>
 
       <div className={styles.wrapper}>
-        <Link to="/shop/2" className={styles.link}>
-          <img src={sideneert} alt="Sideneert" className={styles.img} />
+        <Link to={`/shop/${COMFORT_ITEM}`} className={styles.link}>
+          {loading && <Loader />}
+          <img src={data?.image} alt={data?.name} className={styles.img} />
         </Link>
 
         <div className={styles.description}>
-          <h3 className={styles.subtitle}>Sideneert</h3>
+          <h3 className={styles.subtitle}>{data?.name}</h3>
           <div className={styles.made}>
             <span>It is made from soft New Zealand wool,</span>{" "}
             <span>which is naturally stain-repellent.</span>
