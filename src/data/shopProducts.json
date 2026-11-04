@@ -1,53 +1,108 @@
 {
   "products": [
-    { "id": 1, "name": "Ingrun", "size": "130x170", "price": 90, "image": "images/Ingrun.png" },
+    {
+      "id": 1,
+      "name": "Ingrun",
+      "size": "130x170",
+      "price": 90,
+      "image": "images/Ingrun.png",
+      "color": "gray"
+    },
     {
       "id": 2,
       "name": "Mialotta",
       "size": "130x170",
       "price": 140,
-      "image": "images/Mialotta.png"
+      "image": "images/Mialotta.png",
+      "color": "orange"
     },
     {
       "id": 3,
       "name": "Luddmalla",
       "size": "130x170",
       "price": 95,
-      "image": "images/Luddmalla.png"
+      "image": "images/Luddmalla.png",
+      "color": "gray"
     },
     {
       "id": 4,
       "name": "Vivianna",
       "size": "120x180",
       "price": 175,
-      "image": "images/Vivianna.png"
+      "image": "images/Vivianna.png",
+      "color": "gray"
     },
-    { "id": 5, "name": "Evali", "size": "130x170", "price": 90, "image": "images/Evali.png" },
-    { "id": 6, "name": "Kersti", "size": "150x200", "price": 175, "image": "images/Kersti.png" },
-    { "id": 7, "name": "Helgun", "size": "150x200", "price": 135, "image": "images/Helgun.png" },
+    {
+      "id": 5,
+      "name": "Evali",
+      "size": "130x170",
+      "price": 90,
+      "image": "images/Evali.png",
+      "color": "gray"
+    },
+    {
+      "id": 6,
+      "name": "Kersti",
+      "size": "150x200",
+      "price": 175,
+      "image": "images/Kersti.png",
+      "color": "brown"
+    },
+    {
+      "id": 7,
+      "name": "Helgun",
+      "size": "150x200",
+      "price": 135,
+      "image": "images/Helgun.png",
+      "color": "beige"
+    },
     {
       "id": 8,
       "name": "Dagnhild",
       "size": "150x200",
       "price": 150,
-      "image": "images/Dagnhild.png"
+      "image": "images/Dagnhild.png",
+      "color": "brown"
     },
-    { "id": 9, "name": "Varkrage", "size": "110x170", "price": 90, "image": "images/Varkrage.png" },
+    {
+      "id": 9,
+      "name": "Varkrage",
+      "size": "110x170",
+      "price": 90,
+      "image": "images/Varkrage.png",
+      "color": "red"
+    },
     {
       "id": 10,
       "name": "Dablidun",
       "size": "150x200",
       "price": 170,
-      "image": "images/Dablidun.png"
+      "image": "images/Dablidun.png",
+      "color": "red"
     },
     {
       "id": 11,
       "name": "Ingabritta",
       "size": "130x170",
       "price": 120,
-      "image": "images/Ingabritta.png"
+      "image": "images/Ingabritta.png",
+      "color": "pink"
     },
-    { "id": 12, "name": "Ylvali", "size": "130x170", "price": 110, "image": "images/Ylvali.png" },
-    { "id": 13, "name": "Ylvali", "size": "150x200", "price": 85, "image": "images/Rovaror.png" }
+    {
+      "id": 12,
+      "name": "Ylvali",
+      "size": "130x170",
+      "price": 110,
+      "image": "images/Ylvali.png",
+      "color": "gray"
+    },
+    {
+      "id": 13,
+      "name": "Rovaror",
+      "size": "150x200",
+      "price": 85,
+      "image": "images/Rovaror.png",
+      "color": "gray"
+    }
   ]
 }

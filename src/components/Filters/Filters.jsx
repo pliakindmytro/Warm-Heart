@@ -1,6 +1,6 @@
 import styles from "./Filters.module.css";
 
-export default function Filters() {
+export default function Filters({ length }) {
   return (
     <div className={styles.filters}>
       <div className={styles.wrapper}>
@@ -81,7 +81,7 @@ export default function Filters() {
           </select>
         </div>
 
-        <div className={styles.products}>100 products</div>
+        <div className={styles.products}>{length} products</div>
       </div>
     </div>
   );

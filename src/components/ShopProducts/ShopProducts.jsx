@@ -24,7 +24,7 @@ export default function ShopProducts() {
 
   return (
     <div className={styles.shop}>
-      <Filters />
+      <Filters length={data?.length} />
 
       {loading && <Loader />}
 
