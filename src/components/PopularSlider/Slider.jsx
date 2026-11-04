@@ -7,9 +7,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import Arrow from "../ArrowsNavigate/Arrow";
+
 import styles from "./Slider.module.css";
-import ArrowLeft from "../ArrowsNavigate/ArrowLeft";
-import ArrowRight from "../ArrowsNavigate/ArrowRight";
 
 export default function Slider({ products, initialSlide }) {
   const swiperRef = useRef(null);
@@ -56,8 +56,8 @@ export default function Slider({ products, initialSlide }) {
             </Link>
           </SwiperSlide>
         ))}
-        <ArrowLeft onClick={() => swiperRef.current?.slidePrev()} />
-        <ArrowRight onClick={() => swiperRef.current?.slideNext()} />
+        <Arrow onClick={() => swiperRef.current?.slidePrev()} className={styles.left} />
+        <Arrow onClick={() => swiperRef.current?.slideNext()} className={styles.right} />
       </Swiper>
     </section>
   );

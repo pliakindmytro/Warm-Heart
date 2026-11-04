@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+import useFetch from "../../hooks/useFetch";
 
 import Filters from "../Filters/Filters";
 import ShopCard from "../ShopCard/ShopCard";
@@ -8,33 +10,17 @@ import Loader from "../Loader/Loader";
 import styles from "./ShopProducts.module.css";
 
 export default function ShopProducts() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [data, loading, error] = useFetch("http://localhost:3001/products");
 
-  useEffect(() => {
-    const request = async (url) => {
-      try {
-        const res = await fetch(url);
+  const [currentPage, setCurrentPage] = useState(1);
 
-        if (!res.ok) {
-          throw new Error("Something went wrong on backend...");
-        }
+  const visibleProducts = 12;
 
-        const data = await res.json();
-        console.log(data);
+  const totalPages = Math.ceil(data?.length / visibleProducts);
 
-        setProducts(data);
-      } catch (e) {
-        setError(true);
-        console.log(e.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const startIndex = (currentPage - 1) * visibleProducts;
 
-    request("http://localhost:3001/products");
-  }, []);
+  const currentProducts = data?.slice(startIndex, startIndex + visibleProducts);
 
   return (
     <div className={styles.shop}>
@@ -43,12 +29,18 @@ export default function ShopProducts() {
       {loading && <Loader />}
 
       <ul className={styles.wrapper}>
-        {products.map((product) => (
+        {currentProducts?.map((product) => (
           <ShopCard product={product} key={product.id} />
         ))}
       </ul>
 
-      {products.length > 0 && <Pagination />}
+      {data?.length > 0 && (
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          setCurrentPage={setCurrentPage}
+        />
+      )}
     </div>
   );
 }

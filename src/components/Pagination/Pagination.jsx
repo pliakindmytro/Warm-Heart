@@ -1,46 +1,48 @@
+import Arrow from "../ArrowsNavigate/Arrow";
 import NumButton from "../NumButton/NumButton";
 
 import styles from "./Pagination.module.css";
 
-export default function Pagination() {
+export default function Pagination({ currentPage, totalPages, setCurrentPage }) {
+  const handleScrollTo = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handlePageChange = (i) => {
+    setCurrentPage(i + 1);
+    handleScrollTo();
+  };
+
+  const handleNextPage = () => {
+    if (currentPage === totalPages) return;
+
+    handleScrollTo();
+    setCurrentPage((prev) => prev + 1);
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage === 1) return;
+
+    handleScrollTo();
+    setCurrentPage((prev) => prev - 1);
+  };
+
   return (
     <div className={styles.wrapper}>
-      <svg
-        width="33"
-        height="23"
-        viewBox="0 0 33 23"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={styles.left}
-      >
-        <path
-          d="M31.5 11.5H1.5M12.5 21.5L1.5 11.5L12.5 1.5"
-          stroke="#2C2C2C"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <Arrow onClick={handlePrevPage} className={styles.left} />
 
-      <NumButton num={1} active={true} />
-      <NumButton num={2} />
+      <div className={styles.numButtons}>
+        {Array.from({ length: totalPages }, (_, i) => (
+          <NumButton
+            key={i}
+            num={i + 1}
+            active={currentPage === i + 1}
+            onClick={() => handlePageChange(i)}
+          />
+        ))}
+      </div>
 
-      <svg
-        width="33"
-        height="23"
-        viewBox="0 0 33 23"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className={styles.right}
-      >
-        <path
-          d="M1.5 11.5H31.5M20.5 21.5L31.5 11.5L20.5 1.5"
-          stroke="#2C2C2C"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
+      <Arrow onClick={handleNextPage} className={styles.right} />
     </div>
   );
 }

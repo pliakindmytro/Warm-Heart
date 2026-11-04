@@ -1,0 +1,8 @@
+.arrow {
+  bottom: 0;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}

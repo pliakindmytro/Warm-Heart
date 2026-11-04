@@ -47,6 +47,7 @@
       "price": 120,
       "image": "images/Ingabritta.png"
     },
-    { "id": 12, "name": "Ylvali", "size": "130x170", "price": 110, "image": "images/Ylvali.png" }
+    { "id": 12, "name": "Ylvali", "size": "130x170", "price": 110, "image": "images/Ylvali.png" },
+    { "id": 13, "name": "Ylvali", "size": "150x200", "price": 85, "image": "images/Rovaror.png" }
   ]
 }
