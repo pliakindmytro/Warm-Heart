@@ -1,6 +1,10 @@
+import { useState } from "react";
+
+import FiltersSelect from "../FiltersSelect/FiltersSelect";
+
 import styles from "./Filters.module.css";
 
-export default function Filters({ length }) {
+export default function Filters({ length, handleUpdateFilters }) {
   return (
     <div className={styles.filters}>
       <div className={styles.wrapper}>
@@ -45,40 +49,35 @@ export default function Filters({ length }) {
             </svg>
           </p>
 
-          <select className={styles.select}>
-            <option value="">Size</option>
-            <option value="">110x170</option>
-            <option value="">120x180</option>
-            <option value="">130x170</option>
-            <option value="">150x200</option>
-          </select>
+          <FiltersSelect
+            options={["Size", "110x170", "120x180", "130x170", "150x200"]}
+            onChange={handleUpdateFilters}
+          />
 
-          <select className={styles.select}>
-            <option value="">Color</option>
-            <option value="">#</option>
-            <option value="">#</option>
-            <option value="">#</option>
-            <option value="">#</option>
-          </select>
+          <FiltersSelect
+            options={["Color", "beige", "orange", "red", "pink", "brown", "gray"]}
+            onChange={handleUpdateFilters}
+          />
 
-          <select className={styles.select}>
-            <option value="">Material</option>
-            <option value="">#</option>
-            <option value="">#</option>
-            <option value="">#</option>
-            <option value="">#</option>
-          </select>
+          <FiltersSelect options={["Material", "#"]} onChange={handleUpdateFilters} />
 
-          <select className={styles.select}>
-            <option value="">Price</option>
-            <option value="">€85</option>
-            <option value="">€90</option>
-            <option value="">€95</option>
-            <option value="">€135</option>
-            <option value="">€140</option>
-            <option value="">€150</option>
-            <option value="">€170</option>
-          </select>
+          <FiltersSelect
+            options={[
+              "Price",
+              "€85",
+              "€90",
+              "€95",
+              "€110",
+              "€120",
+              "€135",
+              "€140",
+              "€150",
+              "€170",
+              "€175",
+              "€180",
+            ]}
+            onChange={handleUpdateFilters}
+          />
         </div>
 
         <div className={styles.products}>{length} products</div>

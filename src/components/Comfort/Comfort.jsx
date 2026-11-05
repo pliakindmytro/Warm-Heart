@@ -29,7 +29,7 @@ export default function Comfort() {
       <div className={styles.wrapper}>
         <Link to={`/shop/${COMFORT_ITEM}`} className={styles.link}>
           {loading && <Loader />}
-          <img src={data?.image} alt={data?.name} className={styles.img} />
+          {data && <img src={data.image} alt={data.name} className={styles.img} />}
         </Link>
 
         <div className={styles.description}>
@@ -47,7 +47,7 @@ export default function Comfort() {
           <div className={styles.button}>
             <Button
               style={{ backgroundColor: "var(--white)", color: "var(--black)" }}
-              onClick={() => navigate("/shop/2")}
+              onClick={() => navigate(`/shop/${COMFORT_ITEM}`)}
             >
               Go to shop
             </Button>
