@@ -1,5 +1,16 @@
 .eco {
+  position: relative;
   padding: 70px 20px 90px 20px;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .title {
@@ -36,6 +47,12 @@
 @media (min-width: 768px) {
   .eco {
     padding: 90px 20px 120px 20px;
+  }
+
+  .img {
+    width: 150px;
+    height: 150px;
+    top: -75px;
   }
 
   .title {

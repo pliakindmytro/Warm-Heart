@@ -1,0 +1,184 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ingrun",
+      "size": "130x170",
+      "price": 90,
+      "image": "/images/Ingrun.png",
+      "color": "gray",
+      "isPopular": false,
+      "isFeatured": false
+    },
+    {
+      "id": 2,
+      "name": "Mialotta",
+      "size": "130x170",
+      "price": 140,
+      "image": "/images/Mialotta.png",
+      "color": "orange",
+      "isPopular": false,
+      "isFeatured": true
+    },
+    {
+      "id": 3,
+      "name": "Luddmalla",
+      "size": "130x170",
+      "price": 95,
+      "image": "/images/Luddmalla.png",
+      "color": "gray",
+      "isPopular": false,
+      "isFeatured": false
+    },
+    {
+      "id": 4,
+      "name": "Vivianna",
+      "size": "120x180",
+      "price": 175,
+      "image": "/images/Vivianna.png",
+      "color": "gray",
+      "isPopular": false,
+      "isFeatured": true
+    },
+    {
+      "id": 5,
+      "name": "Evali",
+      "size": "130x170",
+      "price": 90,
+      "image": "/images/Evali.png",
+      "color": "gray",
+      "isPopular": false,
+      "isFeatured": false
+    },
+    {
+      "id": 6,
+      "name": "Kersti",
+      "size": "150x200",
+      "price": 175,
+      "image": "/images/Kersti.png",
+      "color": "brown",
+      "isPopular": true,
+      "isFeatured": false
+    },
+    {
+      "id": 7,
+      "name": "Helgun",
+      "size": "150x200",
+      "price": 135,
+      "image": "/images/Helgun.png",
+      "color": "beige",
+      "isPopular": false,
+      "isFeatured": false
+    },
+    {
+      "id": 8,
+      "name": "Dagnhild",
+      "size": "150x200",
+      "price": 150,
+      "image": "/images/Dagnhild.png",
+      "color": "brown",
+      "isPopular": false,
+      "isFeatured": false
+    },
+    {
+      "id": 9,
+      "name": "Varkrage",
+      "size": "110x170",
+      "price": 90,
+      "image": "/images/Varkrage.png",
+      "color": "red",
+      "isPopular": false,
+      "isFeatured": true
+    },
+    {
+      "id": 10,
+      "name": "Dablidun",
+      "size": "150x200",
+      "price": 170,
+      "image": "/images/Dablidun.png",
+      "color": "red",
+      "isPopular": false,
+      "isFeatured": false
+    },
+    {
+      "id": 11,
+      "name": "Ingabritta",
+      "size": "130x170",
+      "price": 120,
+      "image": "/images/Ingabritta.png",
+      "color": "pink",
+      "isPopular": true,
+      "isFeatured": false
+    },
+    {
+      "id": 12,
+      "name": "Ylvali",
+      "size": "130x170",
+      "price": 110,
+      "image": "/images/Ylvali.png",
+      "color": "gray",
+      "isPopular": true,
+      "isFeatured": false
+    },
+    {
+      "id": 13,
+      "name": "Rovaror",
+      "size": "150x200",
+      "price": 85,
+      "image": "/images/Rovaror.png",
+      "color": "gray",
+      "isPopular": true,
+      "isFeatured": false
+    },
+    {
+      "id": 14,
+      "name": "Sideneert",
+      "size": "150x200",
+      "price": 135,
+      "image": "/images/Sideneert.png",
+      "color": "gray",
+      "isPopular": false,
+      "isFeatured": false
+    },
+    {
+      "id": 15,
+      "name": "Gerhild",
+      "size": "130x170",
+      "price": 90,
+      "image": "/images/Gerhild.png",
+      "color": "beige",
+      "isPopular": true,
+      "isFeatured": false
+    },
+    {
+      "id": 16,
+      "name": "Gultall",
+      "size": "130x170",
+      "price": 180,
+      "image": "/images/Gultall.png",
+      "color": "gray",
+      "isPopular": true,
+      "isFeatured": true
+    },
+    {
+      "id": 17,
+      "name": "Ulltistel",
+      "size": "130x170",
+      "price": 150,
+      "image": "/images/Ulltistel.png",
+      "color": "red",
+      "isPopular": false,
+      "isFeatured": true
+    },
+    {
+      "id": 18,
+      "name": "Gulklint",
+      "size": "150x200",
+      "price": 175,
+      "image": "/images/Gulklint.png",
+      "color": "brown",
+      "isPopular": false,
+      "isFeatured": true
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 import styles from "./Purchases.module.css";
 
 import Bag from "../Bag/Bag";
-import Search from "../Search/Search";
+import AuthLink from "../AuthLink/AuthLink";
 
 export default function Purchases() {
   return (
     <div className={styles.purchases}>
-      <Search />
+      <AuthLink />
 
       <Bag classCart="cart" />
     </div>

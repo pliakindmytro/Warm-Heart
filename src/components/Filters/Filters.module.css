@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.choice {
+  display: flex;
+  column-gap: 10px;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  color: var(--black);
+}
+
+.products {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  color: var(--black);
+}
+
+@media (min-width: 768px) {
+  .text,
+  .icon {
+    display: none;
+  }
+
+  .choice {
+    column-gap: 40px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper {
+    width: 1218px;
+  }
+
+  .choice {
+    column-gap: 50px;
+  }
+}

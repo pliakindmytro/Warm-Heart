@@ -1,0 +1,28 @@
+.block {
+  width: fit-content;
+  padding: 6px 30px 10px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  background-color: var(--black);
+}
+
+.btn {
+  padding: 6px;
+  background-color: #fdfbf953;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .description {
+    font-size: 17px;
+  }
+}

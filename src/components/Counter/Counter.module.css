@@ -1,0 +1,14 @@
+.counter {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.minus,
+.plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}

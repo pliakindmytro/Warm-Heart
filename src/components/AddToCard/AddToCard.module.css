@@ -1,0 +1,36 @@
+.wrapper {
+  margin-top: 40px;
+  display: flex;
+  column-gap: 40px;
+}
+
+.btn {
+  width: 180px;
+  padding: 13px 44px 18px 44px;
+  font: inherit;
+  font-weight: 700;
+}
+
+@media (min-width: 480px) {
+  .btn {
+    width: 255px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .btn {
+    width: 265px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper {
+    margin-top: 60px;
+  }
+}
