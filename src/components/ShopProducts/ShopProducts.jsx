@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import useFetch from "../../hooks/useFetch";
 
@@ -6,19 +6,22 @@ import Filters from "../Filters/Filters";
 import ShopCard from "../ShopCard/ShopCard";
 import Pagination from "../Pagination/Pagination";
 import Loader from "../Loader/Loader";
+import FiltersBlock from "../FiltersBlock/FiltersBlock";
 
 import styles from "./ShopProducts.module.css";
-import FiltersBlock from "../FiltersBlock/FiltersBlock";
 
 export default function ShopProducts() {
   const [data, loading, error] = useFetch("http://localhost:3001/products");
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  const [filters, setFilters] = useState({
-    size: [],
-    color: [],
-    material: [],
-    price: [],
-  });
+  const filters = {
+    size: searchParams.getAll("size"),
+    color: searchParams.getAll("color"),
+    material: searchParams.getAll("material"),
+    price: searchParams.getAll("price"),
+  };
+
+  const currentPage = Number(searchParams.get("page") || 1);
 
   const filtredData = data?.filter((product) => {
     return (
@@ -29,32 +32,46 @@ export default function ShopProducts() {
     );
   });
 
-  const [currentPage, setCurrentPage] = useState(1);
-
   const visibleProducts = 12;
-  const totalPages = Math.ceil(data?.length / visibleProducts);
+  const totalPages = Math.ceil(filtredData?.length / visibleProducts);
   const startIndex = (currentPage - 1) * visibleProducts;
   const currentProducts = filtredData?.slice(startIndex, startIndex + visibleProducts);
 
   const handleUpdateFilters = (name, value) => {
-    setFilters((prev) => ({
-      ...prev,
-      [name]: prev[name].includes(value)
-        ? prev[name].filter((item) => item !== value)
-        : [...prev[name], value],
-    }));
+    const params = new URLSearchParams(searchParams);
+
+    if (params.getAll(name).includes(value)) {
+      const rest = params.getAll(name).filter((item) => item !== value);
+
+      params.delete(name);
+
+      rest.forEach((item) => params.append(name, item));
+    } else {
+      params.append(name, value);
+    }
+
+    params.delete("page");
+
+    setSearchParams(params);
   };
 
   const handleRemoveFilter = (filter) => {
-    setFilters((prev) => {
-      const updatedFilters = { ...prev };
+    const params = new URLSearchParams();
 
-      Object.keys(updatedFilters).forEach((key) => {
-        updatedFilters[key] = updatedFilters[key].filter((item) => item !== filter);
-      });
-
-      return updatedFilters;
+    searchParams.forEach((value, key) => {
+      if (value !== filter) {
+        params.append(key, value);
+      }
     });
+
+    params.delete("page");
+    setSearchParams(params);
+  };
+
+  const setCurrentPage = (page) => {
+    const params = new URLSearchParams(searchParams);
+    params.set("page", page);
+    setSearchParams(params);
   };
 
   return (

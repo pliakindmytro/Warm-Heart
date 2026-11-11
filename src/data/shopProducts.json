@@ -7,6 +7,7 @@
       "price": 90,
       "image": "/images/Ingrun.png",
       "color": "gray",
+      "material": "cotton",
       "isPopular": false,
       "isFeatured": false
     },
@@ -17,6 +18,7 @@
       "price": 140,
       "image": "/images/Mialotta.png",
       "color": "orange",
+      "material": "cashmere",
       "isPopular": false,
       "isFeatured": true
     },
@@ -27,6 +29,7 @@
       "price": 95,
       "image": "/images/Luddmalla.png",
       "color": "gray",
+      "material": "cotton",
       "isPopular": false,
       "isFeatured": false
     },
@@ -37,6 +40,7 @@
       "price": 175,
       "image": "/images/Vivianna.png",
       "color": "gray",
+      "material": "cashmere",
       "isPopular": false,
       "isFeatured": true
     },
@@ -47,6 +51,7 @@
       "price": 90,
       "image": "/images/Evali.png",
       "color": "gray",
+      "material": "wool",
       "isPopular": false,
       "isFeatured": false
     },
@@ -57,6 +62,7 @@
       "price": 175,
       "image": "/images/Kersti.png",
       "color": "brown",
+      "material": "cashmere",
       "isPopular": true,
       "isFeatured": false
     },
@@ -67,6 +73,7 @@
       "price": 135,
       "image": "/images/Helgun.png",
       "color": "beige",
+      "material": "cotton",
       "isPopular": false,
       "isFeatured": false
     },
@@ -77,6 +84,7 @@
       "price": 150,
       "image": "/images/Dagnhild.png",
       "color": "brown",
+      "material": "cotton",
       "isPopular": false,
       "isFeatured": false
     },
@@ -87,6 +95,7 @@
       "price": 90,
       "image": "/images/Varkrage.png",
       "color": "red",
+      "material": "cotton",
       "isPopular": false,
       "isFeatured": true
     },
@@ -97,6 +106,7 @@
       "price": 170,
       "image": "/images/Dablidun.png",
       "color": "red",
+      "material": "cashmere",
       "isPopular": false,
       "isFeatured": false
     },
@@ -107,6 +117,7 @@
       "price": 120,
       "image": "/images/Ingabritta.png",
       "color": "pink",
+      "material": "cashmere",
       "isPopular": true,
       "isFeatured": false
     },
@@ -117,6 +128,7 @@
       "price": 110,
       "image": "/images/Ylvali.png",
       "color": "gray",
+      "material": "cashmere",
       "isPopular": true,
       "isFeatured": false
     },
@@ -127,6 +139,7 @@
       "price": 85,
       "image": "/images/Rovaror.png",
       "color": "gray",
+      "material": "wool",
       "isPopular": true,
       "isFeatured": false
     },
@@ -137,6 +150,7 @@
       "price": 135,
       "image": "/images/Sideneert.png",
       "color": "gray",
+      "material": "cotton",
       "isPopular": false,
       "isFeatured": false
     },
@@ -147,6 +161,7 @@
       "price": 90,
       "image": "/images/Gerhild.png",
       "color": "beige",
+      "material": "cotton",
       "isPopular": true,
       "isFeatured": false
     },
@@ -157,6 +172,7 @@
       "price": 180,
       "image": "/images/Gultall.png",
       "color": "gray",
+      "material": "cotton",
       "isPopular": true,
       "isFeatured": true
     },
@@ -167,6 +183,7 @@
       "price": 150,
       "image": "/images/Ulltistel.png",
       "color": "red",
+      "material": "cotton",
       "isPopular": false,
       "isFeatured": true
     },
@@ -177,6 +194,7 @@
       "price": 175,
       "image": "/images/Gulklint.png",
       "color": "brown",
+      "material": "cashmere",
       "isPopular": false,
       "isFeatured": true
     }

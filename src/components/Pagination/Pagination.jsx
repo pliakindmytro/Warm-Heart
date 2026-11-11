@@ -17,14 +17,14 @@ export default function Pagination({ currentPage, totalPages, setCurrentPage }) 
     if (currentPage === totalPages) return;
 
     handleScrollTo();
-    setCurrentPage((prev) => prev + 1);
+    setCurrentPage(currentPage + 1);
   };
 
   const handlePrevPage = () => {
     if (currentPage === 1) return;
 
     handleScrollTo();
-    setCurrentPage((prev) => prev - 1);
+    setCurrentPage(currentPage - 1);
   };
 
   return (

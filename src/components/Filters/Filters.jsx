@@ -59,7 +59,10 @@ export default function Filters({ length, handleUpdateFilters }) {
             onChange={handleUpdateFilters}
           />
 
-          <FiltersSelect options={["Material", "#"]} onChange={handleUpdateFilters} />
+          <FiltersSelect
+            options={["Material", "cotton", "cashmere", "wool"]}
+            onChange={handleUpdateFilters}
+          />
 
           <FiltersSelect
             options={[
