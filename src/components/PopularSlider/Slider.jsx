@@ -9,9 +9,13 @@ import "swiper/css/pagination";
 
 import Arrow from "../ArrowsNavigate/Arrow";
 
+import { useLastViewed } from "../../contexts/LastViewedContext";
+
 import styles from "./Slider.module.css";
 
 export default function Slider({ products, initialSlide }) {
+  const { handleAddLastViewedCard } = useLastViewed();
+
   const swiperRef = useRef(null);
 
   return (
@@ -40,7 +44,7 @@ export default function Slider({ products, initialSlide }) {
       >
         {products.map((product) => (
           <SwiperSlide className={styles.slide}>
-            <Link to={`/shop/${product.id}`}>
+            <Link to={`/shop/${product.id}`} onClick={() => handleAddLastViewedCard(product.id)}>
               <div className={styles.wrapper}>
                 <div className={styles.content}>
                   <img src={product.image} alt={product.name} className={styles.img} />

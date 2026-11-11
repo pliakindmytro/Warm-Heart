@@ -16,7 +16,7 @@ export default function CardDetails() {
     <div className={styles.cardDetails}>
       {loading && <Loader />}
 
-      {data && (
+      {data && !loading && (
         <div className={styles.wrapper}>
           <img src={`${data.image}`} alt={data.name} className={styles.img} />
 

@@ -11,7 +11,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky",
-    "server": "json-server src/data/shopProducts.json --port 3001"
+    "server": "json-server src/data/shopProducts.json --port 3001 --delay 1000"
   },
   "lint-staged": {
     "*.{js,jsx}": [

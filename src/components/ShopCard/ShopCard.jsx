@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
+
+import { useLastViewed } from "../../contexts/LastViewedContext";
+
 import styles from "./ShopCard.module.css";
 
 export default function ShopCard({ product }) {
+  const { handleAddLastViewedCard } = useLastViewed();
+
   return (
     <li className={styles.card}>
-      <Link to={`/shop/${product.id}`}>
+      <Link to={`/shop/${product.id}`} onClick={() => handleAddLastViewedCard(product.id)}>
         <div className={styles.img}>
           <img src={product.image} alt={product.name} />
         </div>

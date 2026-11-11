@@ -4,9 +4,15 @@ import { Link } from "react-router-dom";
 
 import { previewProducts } from "../../data/previewProducts";
 
+import { useLastViewed } from "../../contexts/LastViewedContext";
+
 import styles from "./PreviewSlider.module.css";
 
+const PREWIEW_PRODUCT_ID = 7;
+
 export default function PreviewSlider() {
+  const { handleAddLastViewedCard } = useLastViewed();
+
   return (
     <Swiper
       modules={[Pagination]}
@@ -23,7 +29,11 @@ export default function PreviewSlider() {
     >
       {previewProducts.map((product) => (
         <SwiperSlide className={styles.slide}>
-          <Link to="/shop/7" className={styles.link}>
+          <Link
+            to={`/shop/${PREWIEW_PRODUCT_ID}`}
+            className={styles.link}
+            onClick={() => handleAddLastViewedCard(PREWIEW_PRODUCT_ID)}
+          >
             <img src={product.image} alt={product.image} />
           </Link>
           <svg

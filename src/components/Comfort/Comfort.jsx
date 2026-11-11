@@ -5,12 +5,15 @@ import Loader from "../Loader/Loader";
 
 import useFetch from "../../hooks/useFetch";
 
+import { useLastViewed } from "../../contexts/LastViewedContext";
+
 import styles from "./Comfort.module.css";
 
 const COMFORT_ITEM = 14;
 
 export default function Comfort() {
   const navigate = useNavigate();
+  const { handleAddLastViewedCard } = useLastViewed();
 
   const [data, loading, error] = useFetch(`http://localhost:3001/products/${COMFORT_ITEM}`);
 
@@ -27,7 +30,11 @@ export default function Comfort() {
       </div>
 
       <div className={styles.wrapper}>
-        <Link to={`/shop/${COMFORT_ITEM}`} className={styles.link}>
+        <Link
+          to={`/shop/${COMFORT_ITEM}`}
+          className={styles.link}
+          onClick={() => handleAddLastViewedCard(COMFORT_ITEM)}
+        >
           {loading && <Loader />}
           {data && <img src={data.image} alt={data.name} className={styles.img} />}
         </Link>
@@ -47,7 +54,10 @@ export default function Comfort() {
           <div className={styles.button}>
             <Button
               style={{ backgroundColor: "var(--white)", color: "var(--black)" }}
-              onClick={() => navigate(`/shop/${COMFORT_ITEM}`)}
+              onClick={() => {
+                handleAddLastViewedCard(COMFORT_ITEM);
+                navigate(`/shop/${COMFORT_ITEM}`);
+              }}
             >
               Go to shop
             </Button>

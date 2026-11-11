@@ -8,20 +8,24 @@ import ShoppingCartPage from "../../pages/ShoppingCartPage";
 import ContactsPage from "../../pages/ContactsPage";
 import AuthPage from "../../pages/AuthPage";
 
+import { LastViewedProvider } from "../../contexts/LastViewedContext";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route index element={<MainPage />} />
-          <Route path="shop" element={<ShopPage />} />
-          <Route path="shop/:id" element={<CardPage />} />
-          <Route path="cart" element={<ShoppingCartPage />} />
-          <Route path="contacts" element={<ContactsPage />} />
-          <Route path="login" element={<AuthPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <LastViewedProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route index element={<MainPage />} />
+            <Route path="shop" element={<ShopPage />} />
+            <Route path="shop/:id" element={<CardPage />} />
+            <Route path="cart" element={<ShoppingCartPage />} />
+            <Route path="contacts" element={<ContactsPage />} />
+            <Route path="login" element={<AuthPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </LastViewedProvider>
   );
 }
 
